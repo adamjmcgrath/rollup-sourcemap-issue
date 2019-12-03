@@ -6,9 +6,9 @@ module.exports = {
     sourcemap: true,
   },
   plugins: [
-    require('rollup-plugin-terser').terser(),
-    require('rollup-plugin-babel').generated({
+    require('rollup-plugin-babel')({
       presets: [['@babel/env']]
     }),
+    require('rollup-plugin-terser').terser(),
   ]
 };
